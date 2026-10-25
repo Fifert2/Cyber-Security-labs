@@ -1,0 +1,150 @@
+{
+  "document_type": "Selected-field excerpts from Wazuh alert JSON supplied by the lab owner in chat",
+  "provenance_note": "These are curated excerpts, not native full exports. Selected fields retain their supplied values. Analyst assessments are separate from alert_fields. Original full alert JSON remains in the conversation.",
+  "alerts": [
+    {
+      "test_id": "LINUX-01",
+      "alert_fields": {
+        "_index": "wazuh-alerts-4.x-2026.10.24",
+        "_id": "Mbyjb6EBhgnnJA_d_6dp",
+        "_source": {
+          "predecoder": {
+            "hostname": "kali-security-lab",
+            "program_name": "xfce4-screensaver-dialog",
+            "timestamp": "Oct 24 20:39:34"
+          },
+          "agent": {
+            "ip": "192.168.1.72",
+            "name": "kali-security-lab",
+            "id": "001"
+          },
+          "manager": {
+            "name": "wazuh-server"
+          },
+          "data": {
+            "uid": "1000",
+            "euid": "1000",
+            "dstuser": "abdur",
+            "logname": "abdur",
+            "tty": ":0.0"
+          },
+          "rule": {
+            "level": 5,
+            "description": "PAM: User login failed.",
+            "groups": [
+              "pam",
+              "syslog",
+              "authentication_failed"
+            ],
+            "firedtimes": 1,
+            "mitre": {
+              "technique": [
+                "Password Guessing"
+              ],
+              "id": [
+                "T1110.001"
+              ],
+              "tactic": [
+                "Credential Access"
+              ]
+            },
+            "id": "5503"
+          },
+          "decoder": {
+            "name": "pam"
+          },
+          "full_log": "Oct 24 20:39:34 kali-security-lab xfce4-screensaver-dialog[56681]: pam_unix(xfce4-screensaver:auth): authentication failure; logname=abdur uid=1000 euid=1000 tty=:0.0 ruser= rhost=  user=abdur",
+          "input": {
+            "type": "log"
+          },
+          "@timestamp": "2026-10-24T20:39:36.017Z",
+          "location": "journald",
+          "id": "1792874376.12687",
+          "timestamp": "2026-10-24T20:39:36.017+0000"
+        }
+      },
+      "analyst_assessment": "Intentional local screen-lock bad-password test. Collection and rule trigger validated; repeated password-guessing detection was not tested."
+    },
+    {
+      "test_id": "WINDOWS-01",
+      "alert_fields": {
+        "_index": "wazuh-alerts-4.x-2026.10.25",
+        "_id": "z7yQcKEBhgnnJA_dJanU",
+        "_source": {
+          "input": {
+            "type": "log"
+          },
+          "agent": {
+            "ip": "192.168.1.70",
+            "name": "DC01",
+            "id": "002"
+          },
+          "manager": {
+            "name": "wazuh-server"
+          },
+          "data": {
+            "win": {
+              "eventdata": {
+                "subjectLogonId": "0x6b788",
+                "subjectDomainName": "ADLAB",
+                "ipAddress": "::1",
+                "authenticationPackageName": "Negotiate",
+                "workstationName": "DC01",
+                "subStatus": "0xc000006a",
+                "logonProcessName": "seclogo",
+                "targetUserName": "wazuh.lab",
+                "keyLength": "0",
+                "processId": "0x13fc",
+                "ipPort": "0",
+                "failureReason": "%%2313",
+                "targetDomainName": "ADLAB",
+                "targetUserSid": "S-1-0-0",
+                "logonType": "2",
+                "subjectUserName": "Administrator",
+                "status": "0xc000006d"
+              },
+              "system": {
+                "eventID": "4625",
+                "channel": "Security",
+                "systemTime": "2026-10-25T00:57:27.2926636Z",
+                "eventRecordID": "7992",
+                "computer": "DC01.adlab.home.arpa",
+                "severityValue": "AUDIT_FAILURE",
+                "providerName": "Microsoft-Windows-Security-Auditing"
+              }
+            }
+          },
+          "rule": {
+            "level": 5,
+            "description": "Logon Failure - Unknown user or bad password",
+            "groups": [
+              "windows",
+              "windows_security",
+              "authentication_failed"
+            ],
+            "firedtimes": 1,
+            "mitre": {
+              "technique": [
+                "Account Access Removal"
+              ],
+              "id": [
+                "T1531"
+              ],
+              "tactic": [
+                "Impact"
+              ]
+            },
+            "id": "60122"
+          },
+          "location": "EventChannel",
+          "decoder": {
+            "name": "windows_eventchannel"
+          },
+          "id": "1792889849.2411351",
+          "timestamp": "2026-10-25T00:57:29.150+0000"
+        }
+      },
+      "analyst_assessment": "Intentional local runas bad-password test. Original rule metadata is retained, but this event does not substantiate T1531 account access removal. Record 7992 is also present in the supplied Splunk exports."
+    }
+  ]
+}

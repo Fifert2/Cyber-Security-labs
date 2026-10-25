@@ -1,0 +1,1 @@
+index=main host=DC01 source="WinEventLog:Security" EventCode=4625 "wazuh.lab"

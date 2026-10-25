@@ -1,0 +1,158 @@
+{
+  "prepared_date_utc": "2026-10-25",
+  "scope": "Evidence package for the October 24 EDT authentication-monitoring milestone.",
+  "integrity_note": "SHA-256 hashes were generated during packaging. They support later integrity checks, not independent capture-time authentication.",
+  "unique_windows_failed_logon_records": [
+    "7992",
+    "8877"
+  ],
+  "items": [
+    {
+      "evidence_id": "E01",
+      "file": "assets/01-kali-agent-active.png",
+      "original_source": "image(20261024-195718).png",
+      "caption": "Kali agent 001 active; endpoint inventory.",
+      "transformation": "Filename changed only; image bytes unchanged.",
+      "sha256": "0fe24a08d225a60ecd6deaa670dce6122374cfdc4cc9747e33ede19573125dea"
+    },
+    {
+      "evidence_id": "E02",
+      "file": "assets/02-wazuh-rule-5503.png",
+      "original_source": "image(20261024-200323).png",
+      "caption": "Built-in Wazuh rule 5503 definition.",
+      "transformation": "Filename changed only; image bytes unchanged.",
+      "sha256": "08b48ed01e32b07ee19dfbef4cbd125acc79efd9327027db4764a57af2534363"
+    },
+    {
+      "evidence_id": "E03",
+      "file": "assets/03-kali-failure-source-fields.png",
+      "original_source": "image(20261024-204524).png",
+      "caption": "Kali failed authentication: endpoint and source fields.",
+      "transformation": "Filename changed only; image bytes unchanged.",
+      "sha256": "e28f6c5c463147026500dc78aae075172583009663de87c472b13963ee68ea71"
+    },
+    {
+      "evidence_id": "E04",
+      "file": "assets/04-kali-failure-rule-mapping.png",
+      "original_source": "image(20261024-204534).png",
+      "caption": "Kali PAM failure, rule 5503, and T1110.001.",
+      "transformation": "Filename changed only; image bytes unchanged.",
+      "sha256": "aa8c0d38ce15da9f3db35835529c625d27b44059f974c2068ca991d9163e0f45"
+    },
+    {
+      "evidence_id": "E05",
+      "file": "assets/05-wazuh-mitre-overview.png",
+      "original_source": "image(8).png",
+      "caption": "Wazuh ATT&CK dashboard; categories do not establish malicious intent.",
+      "transformation": "Filename changed only; image bytes unchanged.",
+      "sha256": "8bf405b225d3d9411aeb57b43fdc5fdac0da130e9335f7194f5d8cdd620b642c"
+    },
+    {
+      "evidence_id": "E06",
+      "file": "assets/06-wazuh-dc01-active.png",
+      "original_source": "image(20261025-003120).png",
+      "caption": "DC01 agent 002 active; Kali stopped to free memory.",
+      "transformation": "Filename changed only; image bytes unchanged.",
+      "sha256": "24f8a14d6925c69f33abff32ef9f81549b230d02132acdb5cdae6675b0161082"
+    },
+    {
+      "evidence_id": "E07",
+      "file": "assets/07-wazuh-windows-telemetry.png",
+      "original_source": "image(20261025-003334).png",
+      "caption": "Windows telemetry in Wazuh; 437-hit snapshot.",
+      "transformation": "Filename changed only; image bytes unchanged.",
+      "sha256": "e116361a6b90abab85a73fca6a87002b09587952a35d63637a76b890154373d1"
+    },
+    {
+      "evidence_id": "E08",
+      "file": "assets/08-windows-audit-policy.png",
+      "original_source": "image(20261025-004409).png",
+      "caption": "Logon auditing and observed domain account policy.",
+      "transformation": "Filename changed only; image bytes unchanged.",
+      "sha256": "cf687d9d0e490ef53e8833047823130c7ffeaaf4bed4c150040151655fc4c50e"
+    },
+    {
+      "evidence_id": "E09",
+      "file": "assets/09-wazuh-enrollment-problem.png",
+      "original_source": "image(20261025-002558).png",
+      "caption": "Pre-fix malformed manager configuration and missing enrollment.",
+      "transformation": "Filename changed only; image bytes unchanged.",
+      "sha256": "3212eea2fd04ee96736afef8038d7acf860ab14f15f1e5d8be159eace42d0487"
+    },
+    {
+      "evidence_id": "E10",
+      "file": "assets/10-splunk-forwarder-internal.png",
+      "original_source": "image(20261025-022619).png",
+      "caption": "Splunk internal telemetry; 769-event snapshot.",
+      "transformation": "Filename changed only; image bytes unchanged.",
+      "sha256": "a618432fc11435e0c22add819308de358cda1bc3e1db292423ee3a30500a1f81"
+    },
+    {
+      "evidence_id": "E11",
+      "file": "assets/11-splunk-security-events.png",
+      "original_source": "image(20261025-023254).png",
+      "caption": "Splunk Windows Security source; 3718-event snapshot.",
+      "transformation": "Filename changed only; image bytes unchanged.",
+      "sha256": "b1e06cba4f21315184c8b30feebfe2df764cb8e9d85e63df8e4a93b463092ba9"
+    },
+    {
+      "evidence_id": "E12",
+      "file": "assets/12-splunk-first-failure-search.png",
+      "original_source": "cyber security documentation/ChatGPT Image Oct 24, 2026, 10_39_09 PM.png",
+      "caption": "SPL search and first failed-logon result.",
+      "transformation": "Filename changed only; image bytes unchanged.",
+      "sha256": "61c374df20be3e037b6f605e1b90740d941749b745896405e79dc1ebb6ab439c"
+    },
+    {
+      "evidence_id": "E13",
+      "file": "assets/13-splunk-failure-fields.png",
+      "original_source": "cyber security documentation/ChatGPT Image Oct 24, 2026, 10_39_17 PM.png",
+      "caption": "Record 7992: target account, status, logon type, and loopback source.",
+      "transformation": "Filename changed only; image bytes unchanged.",
+      "sha256": "280713e4bb6c35e24cd205dda31153c6b548d5425c9a98ef5b6234ad482961ab"
+    },
+    {
+      "evidence_id": "E14",
+      "file": "assets/14-splunk-historical-and-live.png",
+      "original_source": "image(20261025-024036).png",
+      "caption": "Original and newly generated failed logons visible together.",
+      "transformation": "Filename changed only; image bytes unchanged.",
+      "sha256": "826305df9aa32da1978e170da129b44a5f55bb13d07e53e0c422e219cdaf673f"
+    },
+    {
+      "evidence_id": "E15",
+      "file": "assets/15-wazuh-session-open-rule.png",
+      "original_source": "cyber security documentation/Wazuh_rule.5402/ChatGPT Image Oct 24, 2026, 04_01_29 PM.png",
+      "caption": "Visible rule 5501 session-open mapping; source folder name differs.",
+      "transformation": "Filename changed only; image bytes unchanged.",
+      "sha256": "da0d1c8eb0522476426ec7cf7eb217d1ab621ecdf75f578714c1cfc3f012bcbe"
+    },
+    {
+      "file": "evidence/splunk-failed-logon-first.json",
+      "original_source": "Report_DC01_-_Test_Account_Failed_Logon.json",
+      "format": "newline-delimited JSON; one Splunk result wrapper per line",
+      "transformation": "Filename changed only; original export bytes unchanged.",
+      "record_numbers": [
+        "7992"
+      ],
+      "sha256": "9d4cd7306a8240501d76eb58fd2bec0e02fd1da9d859af660530c36103d181ed"
+    },
+    {
+      "file": "evidence/splunk-failed-logons-two-events.json",
+      "original_source": "Report2_-_DC01_-_Test_Account_Failed_Logon2.json",
+      "format": "newline-delimited JSON; one Splunk result wrapper per line",
+      "transformation": "Filename changed only; original export bytes unchanged.",
+      "record_numbers": [
+        "8877",
+        "7992"
+      ],
+      "sha256": "cbd8ebb262489e8360583070ad595181fb4a4f804035d0f6ca92a4362fafeadd"
+    },
+    {
+      "file": "evidence/wazuh-alert-excerpts.json",
+      "original_source": "Two Wazuh alert JSON objects pasted by the owner in the conversation.",
+      "transformation": "Selected fields excerpted; analyst interpretation added separately; not a full native export.",
+      "sha256": "96a93e64b58bc19addd5b73d77bcba44c26703dc7121f9205d4de1a8686e561e"
+    }
+  ]
+}
