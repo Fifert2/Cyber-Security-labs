@@ -1,0 +1,4 @@
+test,sequence,dashboard_times_2026_11_01,expected,observed,evidence,status
+positive,5 failures; same account; within 120 seconds,13:45:48.371 to 13:46:08.754,100121 level 10,100121 level 10; four previous records plus triggering record,04-positive-correlation-test.png; positive-alert-original.json,PASS
+negative_account_grouping,3 failures wazuh.lab; 2 failures wazuh.lab2,13:53:54.337 to 13:54:24.416,5 individual alerts; no new 100121,5 alerts under 100120; no new 100121 shown,05-negative-account-grouping.png,PASS
+negative_time_window,3 failures wazuh.lab; wait over 120 seconds; 2 more,14:01:11.982 to 14:01:19.978; 14:04:07.189 to 14:04:11.196,5 individual alerts; no new 100121,5 alerts under 100120; no new 100121 shown,06-negative-time-window.png,PASS

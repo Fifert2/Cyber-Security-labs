@@ -1,0 +1,23 @@
+<group name="local,windows,windows_security,lab_auth,">
+
+  <rule id="100120" level="5">
+    <if_sid>60122</if_sid>
+    <field name="win.system.eventID">^4625$</field>
+    <field name="win.system.computer" type="pcre2">(?i)^DC01\.adlab\.home\.arpa$</field>
+    <field name="win.eventdata.targetDomainName" type="pcre2">(?i)^ADLAB$</field>
+    <field name="win.eventdata.subStatus" type="pcre2">(?i)^0xc000006a$</field>
+    <description>Lab: incorrect-password logon failure on DC01 for $(win.eventdata.targetUserName)</description>
+    <group>authentication_failed,</group>
+  </rule>
+
+  <rule id="100121" level="10" frequency="5" timeframe="120">
+    <if_matched_sid>100120</if_matched_sid>
+    <same_field>win.eventdata.targetUserName</same_field>
+    <description>Lab: repeated incorrect-password failures for the same account on DC01</description>
+    <mitre>
+      <id>T1110.001</id>
+    </mitre>
+    <group>authentication_failures,</group>
+  </rule>
+
+</group>

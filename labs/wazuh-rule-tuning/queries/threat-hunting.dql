@@ -1,0 +1,15 @@
+# Baseline Windows failed logons
+agent.name: "DC01" AND data.win.system.eventID: "4625"
+
+# Custom rules and built-in correlation
+agent.name: "DC01" AND (rule.id: "100120" OR rule.id: "100121" OR rule.id: "60204")
+
+# Correlation alerts only
+agent.name: "DC01" AND rule.id: "100121"
+
+# Both test accounts, custom rules only
+agent.name: "DC01" AND (rule.id: "100120" OR rule.id: "100121") AND (data.win.eventdata.targetUserName: "wazuh.lab" OR data.win.eventdata.targetUserName: "wazuh.lab2")
+
+# Suggested table columns
+# timestamp, agent.name, rule.description, rule.level, rule.id,
+# data.win.eventdata.targetUserName
