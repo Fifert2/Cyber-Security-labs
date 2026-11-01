@@ -1,0 +1,49 @@
+{
+  "provenance": "Derived from positive-alert-original.json; not a separate captured event export",
+  "rule_id": "100121",
+  "level": 10,
+  "frequency": 5,
+  "mitre": {
+    "technique": [
+      "Password Guessing"
+    ],
+    "id": [
+      "T1110.001"
+    ],
+    "tactic": [
+      "Credential Access"
+    ]
+  },
+  "events": [
+    {
+      "record_id": "15458",
+      "windows_system_time_utc": "2026-11-01T17:45:46.9328522Z",
+      "target_account": "ADLAB\\wazuh.lab",
+      "substatus": "0xc000006a"
+    },
+    {
+      "record_id": "15460",
+      "windows_system_time_utc": "2026-11-01T17:45:52.0022489Z",
+      "target_account": "ADLAB\\wazuh.lab",
+      "substatus": "0xc000006a"
+    },
+    {
+      "record_id": "15462",
+      "windows_system_time_utc": "2026-11-01T17:45:57.1786912Z",
+      "target_account": "ADLAB\\wazuh.lab",
+      "substatus": "0xc000006a"
+    },
+    {
+      "record_id": "15464",
+      "windows_system_time_utc": "2026-11-01T17:46:02.2297000Z",
+      "target_account": "ADLAB\\wazuh.lab",
+      "substatus": "0xc000006a"
+    },
+    {
+      "record_id": "15466",
+      "windows_system_time_utc": "2026-11-01T17:46:07.3106968Z",
+      "target_account": "ADLAB\\wazuh.lab",
+      "substatus": "0xc000006a"
+    }
+  ]
+}

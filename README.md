@@ -386,6 +386,12 @@ Screenshot selection favors endpoint state, rule details, raw event fields, sear
 6. Compare the event to the expected behavior and evaluate any rule-supplied ATT&CK mapping.
 7. Save the query and export the event, then repeat with a new event to distinguish working live collection from historical data alone.
 
+## Wazuh detection engineering — November 2026
+
+[Read the rule-tuning lab](labs/wazuh-rule-tuning/README.md)
+
+Implemented and validated custom Wazuh rules for repeated Windows incorrect-password failures. Five failures against the same account within 120 seconds escalate to a level-10 alert mapped to MITRE ATT&CK T1110.001. Positive and negative tests verified triggering, account separation, and expiration of older failures. Includes rule XML, screenshots, the positive alert export, and test results.
+
 ## References
 
 - [Wazuh — MITRE ATT&CK framework and rule mappings](https://documentation.wazuh.com/current/user-manual/ruleset/mitre.html)
